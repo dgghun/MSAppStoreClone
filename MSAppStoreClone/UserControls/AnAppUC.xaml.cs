@@ -24,5 +24,13 @@ namespace MSAppStoreClone.UserControls
         {
             InitializeComponent();
         }
+
+        //......................................................................
+        // EVENTS
+        //......................................................................
+        private void ProductImage_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
