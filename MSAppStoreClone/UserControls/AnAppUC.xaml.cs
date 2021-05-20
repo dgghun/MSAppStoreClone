@@ -1,7 +1,11 @@
-﻿using System;
+﻿using MiscUtil;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +24,27 @@ namespace MSAppStoreClone.UserControls
     /// </summary>
     public partial class AnAppUC : UserControl
     {
+        public string AppName;
+        public ImageSource AppImageSource; 
+
         public AnAppUC()
         {
             InitializeComponent();
+
+            List<string> filepaths = Directory.GetFiles(Environment.CurrentDirectory
+                + @"\..\..\Images", "*.png").ToList<string>();  //Get list of icon image paths
+
+            FileInfo myRandomFile = new FileInfo(filepaths[StaticRandom.Next(filepaths.Count)]);
+            
+            //Set "ProductImage" image and name random image
+            ProductImage.Source = new BitmapImage(new Uri(myRandomFile.FullName, UriKind.RelativeOrAbsolute));
+            AppNameText.Text = (new CultureInfo("en-us", false).TextInfo)
+                .ToTitleCase(myRandomFile.FullName.Split('\\').Last()
+                .Split('-').Last().Split('.').First());
+
+            AppName = AppNameText.Text.ToString();
+            AppImageSource = ProductImage.Source;
+
         }
 
         //......................................................................
