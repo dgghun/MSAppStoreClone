@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              Height="335"
              Width="210"
+             Margin="7"
              >
     <Grid>
         <Grid.RowDefinitions>

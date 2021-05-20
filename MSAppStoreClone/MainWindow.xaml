@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:MSAppStoreClone"
         xmlns:uc="clr-namespace:MSAppStoreClone.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="830">
     <Grid>
-        <uc:AnAppUC></uc:AnAppUC>
+        <uc:AppsViewer></uc:AppsViewer>
     </Grid>
 </Window>
