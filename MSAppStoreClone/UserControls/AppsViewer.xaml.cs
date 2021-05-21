@@ -28,7 +28,7 @@ namespace MSAppStoreClone.UserControls
             InitializeComponent();
             PresentedApps = new List<AnAppUC>();
             AppsList.ItemsSource = PresentedApps;
-            for(int i = 0; i < 9; i++)
+            for(int i = 0; i < 30; i++)
             {
                 AnAppUC curr = new AnAppUC();
                 PresentedApps.Add(curr);
@@ -40,12 +40,16 @@ namespace MSAppStoreClone.UserControls
         //..................................................................
         private void ScrollLeftButton_Click(object sender, RoutedEventArgs e)
         {
-
+            int withOfOneApp = (int)PresentedApps.First().ActualWidth 
+                + 2 * (int)PresentedApps.First().Margin.Left;
+            AppsScrollView.ScrollToHorizontalOffset(AppsScrollView.HorizontalOffset - 1 * withOfOneApp);
         }
 
         private void ScrollRightButton_Click(object sender, RoutedEventArgs e)
         {
-
+            int withOfOneApp = (int)PresentedApps.First().ActualWidth
+                + 2 * (int)PresentedApps.First().Margin.Left;
+            AppsScrollView.ScrollToHorizontalOffset(AppsScrollView.HorizontalOffset + 1 * withOfOneApp);
         }
     }
 }
