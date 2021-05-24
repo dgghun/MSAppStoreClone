@@ -58,11 +58,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AnAppUC.xaml.cs">
       <DependentUpon>AnAppUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AppsViewer.xaml.cs">
       <DependentUpon>AppsViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductivityTopApps.xaml.cs">
+      <DependentUpon>ProductivityTopApps.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TopApps.xaml.cs">
       <DependentUpon>TopApps.xaml</DependentUpon>
@@ -79,11 +85,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AnAppUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\AppsViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProductivityTopApps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +217,21 @@
     <Resource Include="Images\TopAppIcons\83-Race extreme.png" />
     <Resource Include="Images\TopAppIcons\84-chat message.png" />
     <Resource Include="Images\TopAppIcons\85-Night castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ProductivityAppIcons\ACDSee.png" />
+    <Resource Include="Images\ProductivityAppIcons\DrawboardPDF.png" />
+    <Resource Include="Images\ProductivityAppIcons\HotspotShield.png" />
+    <Resource Include="Images\ProductivityAppIcons\Photoshop.png" />
+    <Resource Include="Images\ProductivityAppIcons\PicsArt.png" />
+    <Resource Include="Images\ProductivityAppIcons\YourPhone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TopApps\topapp1.png" />
+    <Resource Include="Images\TopApps\topappsmall1.png" />
+    <Resource Include="Images\TopApps\topappsmall2.png" />
+    <Resource Include="Images\TopApps\topappsmall3.png" />
+    <Resource Include="Images\TopApps\topappsmall4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

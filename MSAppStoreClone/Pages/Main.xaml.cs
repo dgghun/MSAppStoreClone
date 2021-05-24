@@ -1,5 +1,4 @@
-﻿using MSAppStoreClone.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MSAppStoreClone
+namespace MSAppStoreClone.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        private Main MainWindowContentPage;
-
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            MainWindowContentPage = new Main();
-        }
-
-        private void MainWindowFrame_Loaded(object sender, RoutedEventArgs e)
-        {
-            MainWindowFrame.Content = MainWindowContentPage;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using MSAppStoreClone.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,24 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MSAppStoreClone
+namespace MSAppStoreClone.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ProductivityTopApps.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductivityTopApps : UserControl
     {
-        private Main MainWindowContentPage;
-
-        public MainWindow()
+        public ProductivityTopApps()
         {
             InitializeComponent();
-            MainWindowContentPage = new Main();
         }
 
-        private void MainWindowFrame_Loaded(object sender, RoutedEventArgs e)
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            MainWindowFrame.Content = MainWindowContentPage;
+
         }
     }
 }
