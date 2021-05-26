@@ -14,8 +14,8 @@
                NavigationUIVisibility="Hidden"
                Width="{Binding ElementName=MainWindowMetro, Path=ActualWidth}"
                Height="{Binding ElementName=MainWindowMetro, Path=ActualHeight}"
-               >
-            
+               Visibility="Hidden">
         </Frame>
+        <uc:AppDetailsAndBackground></uc:AppDetailsAndBackground>
     </Grid>
 </Window>

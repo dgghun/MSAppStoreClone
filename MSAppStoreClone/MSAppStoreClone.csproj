@@ -64,6 +64,9 @@
     <Compile Include="UserControls\AnAppUC.xaml.cs">
       <DependentUpon>AnAppUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppDetailsAndBackground.xaml.cs">
+      <DependentUpon>AppDetailsAndBackground.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AppsViewer.xaml.cs">
       <DependentUpon>AppsViewer.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\AnAppUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppDetailsAndBackground.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,6 +239,10 @@
     <Resource Include="Images\TopApps\topappsmall2.png" />
     <Resource Include="Images\TopApps\topappsmall3.png" />
     <Resource Include="Images\TopApps\topappsmall4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AppDetailIcons\01-tea.png" />
+    <Resource Include="Images\AppDetailIcons\FieldBackground.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
