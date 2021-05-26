@@ -51,5 +51,18 @@ namespace MSAppStoreClone.UserControls
                 + 2 * (int)PresentedApps.First().Margin.Left;
             AppsScrollView.ScrollToHorizontalOffset(AppsScrollView.HorizontalOffset + 1 * withOfOneApp);
         }
+
+        private void AppsScrollView_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            //Fix scrolling but when mouse is over Apps viewer. That is,...
+            //the screen will not scroll up or down if mouse is hovering
+            //over the apps so this will fix that. Send event AppsViewer to parent ScrollViewer
+            e.Handled = true;
+            var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+            eventArg.RoutedEvent = UIElement.MouseWheelEvent;
+            eventArg.Source = sender;
+            var parent = ((Control)sender).Parent as UIElement;
+            parent.RaiseEvent(eventArg);
+        }
     }
 }
