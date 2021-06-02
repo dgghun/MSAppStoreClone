@@ -1,4 +1,5 @@
 ﻿using MSAppStoreClone.Pages;
+using MSAppStoreClone.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,12 +28,17 @@ namespace MSAppStoreClone
         {
             InitializeComponent();
             MainWindowContentPage = new Main();
+            MainWindowContentPage.AppClicked += MainWindowContentPage_AppClicked;
         }
 
+        private void MainWindowContentPage_AppClicked(AnAppUC sender, RoutedEventArgs e)
+        {
+
+        }
         private void MainWindowFrame_Loaded(object sender, RoutedEventArgs e)
         {
-            AppDetails myAppDetails = new AppDetails();
-            MainWindowFrame.Content = myAppDetails;
+            //AppDetails myAppDetails = new AppDetails();
+            MainWindowFrame.Content = MainWindowContentPage;
         }
     }
 }

@@ -25,7 +25,10 @@ namespace MSAppStoreClone.UserControls
     public partial class AnAppUC : UserControl
     {
         public string AppName;
-        public ImageSource AppImageSource; 
+        public ImageSource AppImageSource;
+
+        public delegate void OnAppClicked(AnAppUC sender, RoutedEventArgs e);
+        public event OnAppClicked AppClicked;
 
         public AnAppUC()
         {
@@ -61,7 +64,7 @@ namespace MSAppStoreClone.UserControls
         //......................................................................
         private void ProductImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            AppClicked(this, e);    //Pass this info to AppClicked event
         }
     }
 }

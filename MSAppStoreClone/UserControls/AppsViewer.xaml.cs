@@ -23,6 +23,9 @@ namespace MSAppStoreClone.UserControls
     {
         List<AnAppUC> PresentedApps;
 
+        public delegate void OnAppClicked(AnAppUC sender, RoutedEventArgs e);
+        public event OnAppClicked AppClicked;
+
         public AppsViewer()
         {
             InitializeComponent();
@@ -31,6 +34,7 @@ namespace MSAppStoreClone.UserControls
             for(int i = 0; i < 30; i++)
             {
                 AnAppUC curr = new AnAppUC();
+                curr.AppClicked += Curr_AppClicked; //add event to pass up hierchy chain
                 PresentedApps.Add(curr);
             }
         }
@@ -50,6 +54,11 @@ namespace MSAppStoreClone.UserControls
             int withOfOneApp = (int)PresentedApps.First().ActualWidth
                 + 2 * (int)PresentedApps.First().Margin.Left;
             AppsScrollView.ScrollToHorizontalOffset(AppsScrollView.HorizontalOffset + 1 * withOfOneApp);
+        }
+
+        private void Curr_AppClicked(AnAppUC sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
         }
 
         private void AppsScrollView_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
