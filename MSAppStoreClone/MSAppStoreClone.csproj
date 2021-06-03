@@ -70,6 +70,9 @@
     <Compile Include="UserControls\AppDetailsAndBackground.xaml.cs">
       <DependentUpon>AppDetailsAndBackground.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppDetailsTabContent\Overview.xaml.cs">
+      <DependentUpon>Overview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AppsViewer.xaml.cs">
       <DependentUpon>AppsViewer.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\AppDetailsAndBackground.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppDetailsTabContent\Overview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

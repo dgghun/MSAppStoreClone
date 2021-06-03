@@ -24,6 +24,9 @@ namespace MSAppStoreClone.Pages
         public delegate void OnBackButtonClicked(object sender, RoutedEventArgs e);
         public event OnBackButtonClicked BackButtonClicked;
 
+        public delegate void OnAppDetailsAnotherAppClicked(AnAppUC sender, RoutedEventArgs e);
+        public event OnAppDetailsAnotherAppClicked AppClicked;
+
         public AppDetails(AnAppUC anApp)
         {
             InitializeComponent();
@@ -31,8 +34,14 @@ namespace MSAppStoreClone.Pages
             AppDetailsAndBackgroundUC.AppNameLabel.Content = anApp.AppName;
             AppDetailsAndBackgroundUC.AppImage.Source= anApp.AppImageSource;
             AppDetailsAndBackgroundUC.BackButtonClicked += AppDetailsAndBackgroundUC_BackButtonClicked;
+
+            OverviewTabUC.AppClicked += OverviewTabUC_AppClicked;
         }
 
+        private void OverviewTabUC_AppClicked(AnAppUC sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
+        }
 
         private void AppDetailsAndBackgroundUC_BackButtonClicked(object sender, RoutedEventArgs e)
         {

@@ -35,6 +35,7 @@ namespace MSAppStoreClone
         {
             AppDetails myAppDetails = new AppDetails(sender);
             myAppDetails.BackButtonClicked += MyAppDetails_BackButtonClicked;
+            myAppDetails.AppClicked += MainWindowContentPage_AppClicked;
             MainWindowFrame.Content = myAppDetails;
         }
 
