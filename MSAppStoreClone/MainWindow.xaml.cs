@@ -33,8 +33,19 @@ namespace MSAppStoreClone
 
         private void MainWindowContentPage_AppClicked(AnAppUC sender, RoutedEventArgs e)
         {
-
+            AppDetails myAppDetails = new AppDetails(sender);
+            myAppDetails.BackButtonClicked += MyAppDetails_BackButtonClicked;
+            MainWindowFrame.Content = myAppDetails;
         }
+
+        private void MyAppDetails_BackButtonClicked(object sender, RoutedEventArgs e)
+        {
+            if (MainWindowFrame.NavigationService.CanGoBack)
+            {
+                MainWindowFrame.NavigationService.GoBack();
+            }
+        }
+
         private void MainWindowFrame_Loaded(object sender, RoutedEventArgs e)
         {
             //AppDetails myAppDetails = new AppDetails();
