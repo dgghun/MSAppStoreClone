@@ -36,9 +36,15 @@ namespace MSAppStoreClone.Pages
             AppDetailsAndBackgroundUC.BackButtonClicked += AppDetailsAndBackgroundUC_BackButtonClicked;
 
             OverviewTabUC.AppClicked += OverviewTabUC_AppClicked;
+            RelatedTabUC.AppClicked += RelatedTabUC_AppClicked;
         }
 
         private void OverviewTabUC_AppClicked(AnAppUC sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
+        }
+
+        private void RelatedTabUC_AppClicked(AnAppUC sender, RoutedEventArgs e)
         {
             AppClicked(sender, e);
         }

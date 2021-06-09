@@ -41,7 +41,9 @@
                     <TabItem Header="Reviews">
                         <ucappdet:Reviews/>
                     </TabItem>
-                    <TabItem Header="Related"></TabItem>
+                    <TabItem Header="Related">
+                        <ucappdet:Related x:Name="RelatedTabUC"/>
+                    </TabItem>
                 </TabControl>
             </Grid>
         </StackPanel>

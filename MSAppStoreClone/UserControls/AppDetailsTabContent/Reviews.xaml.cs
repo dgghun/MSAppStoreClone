@@ -23,14 +23,13 @@ namespace MSAppStoreClone.UserControls.AppDetailsTabContent
         public Reviews()
         {
             InitializeComponent();
+            MainStackPanel.Children.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                MainStackPanel.Children.Add(new AReview());
+            }
+
         }
 
-        private void StackPanel_Loaded(object sender, RoutedEventArgs e)
-        {
-            for(int i = 0; i < 5; i++)
-            {
-                (sender as StackPanel).Children.Add(new AReview());
-            }
-        }
     }
 }
