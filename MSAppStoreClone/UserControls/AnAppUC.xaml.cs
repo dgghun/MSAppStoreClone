@@ -42,6 +42,20 @@ namespace MSAppStoreClone.UserControls
 
         }
 
+        public AnAppUC(string inAppName, ImageSource inImageSource)
+        {
+            InitializeComponent();
+
+            // If in design mode, to load this. Helps VS designer not bug out
+            if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
+                return;
+
+            ProductImage.Source = inImageSource;
+            AppNameText.Text = inAppName;
+            AppName = inAppName;
+            AppImageSource = inImageSource;
+        }
+
         private void loadRandomImage()
         {
             List<string> filepaths = Directory.GetFiles(Environment.CurrentDirectory
