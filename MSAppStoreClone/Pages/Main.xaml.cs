@@ -39,6 +39,7 @@ namespace MSAppStoreClone.Pages
             EntertainmentAppsViewer.AppClicked += AnAppClicked;
             GamingAppsViewer.AppClicked += AnAppClicked;
 
+            TopApps.AppClicked += AnAppClicked;
             FeatruesAppsViewer.AppClicked += AnAppClicked;
             MostPopularAppsViewer.AppClicked += AnAppClicked;
             TopFreeAppsViewer.AppClicked += AnAppClicked;
