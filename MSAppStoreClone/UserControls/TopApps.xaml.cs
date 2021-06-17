@@ -24,6 +24,9 @@ namespace MSAppStoreClone.UserControls
         public delegate void OnAnAppClicked(AnAppUC sender, RoutedEventArgs e);
         public event OnAnAppClicked AppClicked;
 
+        public delegate void OnTopAppButtonClicked(object sender, RoutedEventArgs e);
+        public event OnTopAppButtonClicked TopAppButtonClicked;
+
         public TopApps()
         {
             InitializeComponent();
@@ -46,6 +49,11 @@ namespace MSAppStoreClone.UserControls
         private void MiddleImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void ToppAppsButton_Click(object sender, RoutedEventArgs e)
+        {
+            TopAppButtonClicked(sender, e);
         }
     }
 }

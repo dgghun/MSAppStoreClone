@@ -64,6 +64,9 @@
     <Compile Include="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TopAppsWrapped.xaml.cs">
+      <DependentUpon>TopAppsWrapped.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AnAppUC.xaml.cs">
       <DependentUpon>AnAppUC.xaml</DependentUpon>
     </Compile>
@@ -111,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TopAppsWrapped.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
