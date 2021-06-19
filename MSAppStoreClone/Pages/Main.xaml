@@ -7,7 +7,9 @@
       xmlns:uc="clr-namespace:MSAppStoreClone.UserControls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Main">
+      Title="Main"
+      PreviewMouseDown="Page_PreviewMouseDown"
+      >
 
     <Grid x:Name="MainWindowMainGrid">
         <Grid.RowDefinitions>

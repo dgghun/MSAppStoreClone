@@ -24,6 +24,7 @@
                 Visibility="Collapsed"
                 Width="230"
                 Margin="2"
+                
                 >
             </TextBox>
         </Grid>

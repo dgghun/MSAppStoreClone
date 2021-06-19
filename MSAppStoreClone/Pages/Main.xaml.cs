@@ -48,6 +48,14 @@ namespace MSAppStoreClone.Pages
             MostPopularAppsViewer.AppClicked += AnAppClicked;
             TopFreeAppsViewer.AppClicked += AnAppClicked;
             TopFreeGamesAppsViewer.AppClicked += AnAppClicked;
+
+            RightHeaderButtons.HeaderRightButtonsDownloadButtonClick += RightHeaderButtons_HeaderRightButtonsDownloadButtonClick;
+
+        }
+
+        private void RightHeaderButtons_HeaderRightButtonsDownloadButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void AnAppClicked(AnAppUC sender, RoutedEventArgs e)
@@ -69,6 +77,11 @@ namespace MSAppStoreClone.Pages
                 From = 0, To = 1, Duration = new Duration(new TimeSpan(0, 0, 1))
             };
             element.BeginAnimation(UIElement.OpacityProperty, animation);
+        }
+
+        private void Page_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            RightHeaderButtons.MouseDown_OutsideOfHeaderRightButtons();
         }
     }
 }
