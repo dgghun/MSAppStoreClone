@@ -5,15 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MSAppStoreClone"
         xmlns:uc="clr-namespace:MSAppStoreClone.UserControls"
+        xmlns:HamburgerMenuView="clr-namespace:MSAppStoreClone.UserControls.HamburgerMenuViews"
         mc:Ignorable="d"
         Name="MainWindowMetro"
         Title="MainWindow" Height="800" Width="1350">
     <Grid>
+        <HamburgerMenuView:AllOwned> </HamburgerMenuView:AllOwned>
         <Frame Name="MainWindowFrame"
                Loaded="MainWindowFrame_Loaded"
                NavigationUIVisibility="Hidden"
                Width="{Binding ElementName=MainWindowMetro, Path=ActualWidth}"
                Height="{Binding ElementName=MainWindowMetro, Path=ActualHeight}"
+               Visibility="Collapsed"
                >
         </Frame>
     </Grid>

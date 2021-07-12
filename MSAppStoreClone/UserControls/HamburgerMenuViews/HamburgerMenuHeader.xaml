@@ -42,10 +42,10 @@
                               Name="AllTypesMenutItem" 
                               Click="Filter_MenuItem_Click" 
                               Header="All Types"/>
-                    <MenuItem Width="350" Name="AppsMenuItem" Click="Filter_MuneItem_Click" Header="Apps"/>
-                    <MenuItem Width="350" Name="GamesMenuItem" Click="Filter_MuneItem_Click" Header="Games"/>
-                    <MenuItem Width="350" Name="MoviesMenuItem" Click="Filter_MuneItem_Click" Header="Movies"/>
-                    <MenuItem Width="350" Name="AvatarsMenuItem" Click="Filter_MuneItem_Click" Header="Avatars"/>
+                    <MenuItem Width="350" Name="AppsMenuItem" Click="Filter_MenuItem_Click" Header="Apps"/>
+                    <MenuItem Width="350" Name="GamesMenuItem" Click="Filter_MenuItem_Click" Header="Games"/>
+                    <MenuItem Width="350" Name="MoviesMenuItem" Click="Filter_MenuItem_Click" Header="Movies"/>
+                    <MenuItem Width="350" Name="AvatarsMenuItem" Click="Filter_MenuItem_Click" Header="Avatars"/>
                 </MenuItem>
             </Menu>
             <Menu

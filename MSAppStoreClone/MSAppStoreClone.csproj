@@ -91,11 +91,17 @@
     <Compile Include="UserControls\AppsViewer.xaml.cs">
       <DependentUpon>AppsViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HamburgerMenuViews\AllOwned.xaml.cs">
+      <DependentUpon>AllOwned.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HamburgerMenuViews\HamburgerMenuApp.xaml.cs">
       <DependentUpon>HamburgerMenuApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HamburgerMenuViews\HamburgerMenuAppList.xaml.cs">
       <DependentUpon>HamburgerMenuAppList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HamburgerMenuViews\HamburgerMenuHeader.xaml.cs">
+      <DependentUpon>HamburgerMenuHeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HeaderRightButtons.xaml.cs">
       <DependentUpon>HeaderRightButtons.xaml</DependentUpon>
@@ -162,11 +168,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\HamburgerMenuViews\AllOwned.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\HamburgerMenuViews\HamburgerMenuApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\HamburgerMenuViews\HamburgerMenuAppList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HamburgerMenuViews\HamburgerMenuHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
