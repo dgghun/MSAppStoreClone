@@ -40,7 +40,7 @@ namespace MSAppStoreClone.UserControls.HamburgerMenuViews
         private void SortBy_MenuItem_Click(object sender, RoutedEventArgs e)
         {
             SortByLabel.Content = (sender as MenuItem).Header.ToString();
-            FilterMenuItemClicked(sender, e);
+            SortByMenuItemClicked(sender, e);
         }
     }
 }

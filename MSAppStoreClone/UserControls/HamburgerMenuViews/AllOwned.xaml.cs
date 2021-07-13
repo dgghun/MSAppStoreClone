@@ -23,6 +23,32 @@ namespace MSAppStoreClone.UserControls.HamburgerMenuViews
         public AllOwned()
         {
             InitializeComponent();
+            HamHeader.FilterMenuItemClicked += HamHeader_FilterMenuItemClicked;
+            HamHeader.SortByMenuItemClicked += HamHeader_SortByMenuItemClicked;
+        }
+
+        private void HamHeader_FilterMenuItemClicked(object sender, RoutedEventArgs e)
+        {
+            if((sender as MenuItem).Header.ToString().ToLower() == "all types")
+            {
+                HamAppList.AddAll();
+            }
+            else
+            {
+                HamAppList.FilterByType((sender as MenuItem).Header.ToString());
+            }
+        }
+
+        private void HamHeader_SortByMenuItemClicked(object sender, RoutedEventArgs e)
+        {
+            if ((sender as MenuItem).Header.ToString().ToLower() == "sort by name")
+            {
+                HamAppList.SortByName();
+            }
+            else
+            {
+                HamAppList.SortByDate();
+            }
         }
     }
 }
