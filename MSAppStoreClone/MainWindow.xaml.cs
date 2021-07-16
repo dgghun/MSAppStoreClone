@@ -1,4 +1,5 @@
-﻿using MSAppStoreClone.Pages;
+﻿using MahApps.Metro.Controls;
+using MSAppStoreClone.Pages;
 using MSAppStoreClone.UserControls;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace MSAppStoreClone
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         private Main MainWindowContentPage;
         private TopAppsWrapped MyTopAppsWrappedPage;
