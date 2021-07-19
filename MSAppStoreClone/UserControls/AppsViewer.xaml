@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MSAppStoreClone.UserControls"
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1200"
              Margin="15">
@@ -17,7 +18,21 @@
             <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition Width="0.02*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="0"
+        <Grid.Resources>
+            <Style x:Key="AccenCircleButtonStyle"
+                   BasedOn="{StaticResource MahApps.Styles.Button.Circle}"
+                   TargetType="{x:Type ButtonBase}"
+                   >
+                <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Accent}"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="BorderBrush" Value="{DynamicResource MahApps.Brushes.Accent}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <Button Style="{StaticResource AccenCircleButtonStyle}"
+                Grid.Column="0"
                 Width="40"
                 Height="40"
                 Margin="4"
@@ -47,7 +62,8 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </ScrollViewer>
-        <Button Grid.Column="2"
+        <Button Style="{StaticResource AccenCircleButtonStyle}"
+                Grid.Column="2"
                 Width="40"
                 Height="40"
                 Margin="4"
