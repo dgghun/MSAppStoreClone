@@ -25,10 +25,10 @@ namespace MSAppStoreClone.UserControls.HamburgerMenuViews
 
         public HamburgerMenuAppList()
         {
-            InitializeComponent();
 
             AllApps = new List<HamburgerMenuApp>();
             AppsOnFilter = new List<HamburgerMenuApp>();
+            InitializeComponent();
             for(int i = 0; i < 15; i++)
             {
                 AddNewHamApp();
