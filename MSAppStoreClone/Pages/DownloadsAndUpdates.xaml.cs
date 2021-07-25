@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace MSAppStoreClone.Pages
 {
@@ -30,8 +31,9 @@ namespace MSAppStoreClone.Pages
 
         }
 
-        private void HamburgerMenuControl_ItemInvoked(object sender, MahApps.Metro.Controls.HamburgerMenuItemInvokedEventArgs args)
+        private void HamburgerMenuControl_ItemInvoked(object sender, HamburgerMenuItemInvokedEventArgs args)
         {
+            HamburgerMenuControl.Content = args.InvokedItem;
 
         }
     }

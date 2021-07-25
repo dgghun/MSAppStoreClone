@@ -88,33 +88,57 @@
             <mah:HamburgerMenu.ItemsSource>
                 <mah:HamburgerMenuItemCollection>
                     <mah:HamburgerMenuHeaderItem Label="My Library"/>
-                    <mah:HamburgerMenuGlyphItem Label="All Owned" Glyph="/Images/024-books.png">
+                    <mah:HamburgerMenuGlyphItem  Label="All owned" Glyph="/Images/024-books.png"            >
                         <mah:HamburgerMenuGlyphItem.Tag>
                             <HamburgerViews:AllOwned></HamburgerViews:AllOwned>
                         </mah:HamburgerMenuGlyphItem.Tag>
                     </mah:HamburgerMenuGlyphItem>
-                    <mah:HamburgerMenuGlyphItem Label="Installed" Glyph="/Images/015-folder.png">
+                    <mah:HamburgerMenuGlyphItem  Label="Installed"            Glyph="/Images/015-folder.png"           >
                         <mah:HamburgerMenuGlyphItem.Tag>
                             <HamburgerViews:AllOwned></HamburgerViews:AllOwned>
                         </mah:HamburgerMenuGlyphItem.Tag>
                     </mah:HamburgerMenuGlyphItem>
-                    <mah:HamburgerMenuGlyphItem Label="Ready to install" Glyph="/Images/036-browser.png">
+                    <mah:HamburgerMenuGlyphItem  Label="Ready to install"     Glyph="/Images/036-browser.png"          >
                         <mah:HamburgerMenuGlyphItem.Tag>
                             <HamburgerViews:AllOwned></HamburgerViews:AllOwned>
                         </mah:HamburgerMenuGlyphItem.Tag>
                     </mah:HamburgerMenuGlyphItem>
-                    <mah:HamburgerMenuGlyphItem Label="Downloads" Glyph="/Images/063-slide show app.png">
+                    <mah:HamburgerMenuGlyphItem  Label="Downloads"            Glyph="/Images/063-slide show app.png"   >
                         <mah:HamburgerMenuGlyphItem.Tag>
                             <HamburgerViews:AllOwned></HamburgerViews:AllOwned>
                         </mah:HamburgerMenuGlyphItem.Tag>
                     </mah:HamburgerMenuGlyphItem>
-                    <mah:HamburgerMenuGlyphItem Label="Included with device" Glyph="/Images/070-file hosting.png">
+                    <mah:HamburgerMenuGlyphItem  Label="Included with device" Glyph="/Images/070-file hosting.png"     >
                         <mah:HamburgerMenuGlyphItem.Tag>
                             <HamburgerViews:AllOwned></HamburgerViews:AllOwned>
                         </mah:HamburgerMenuGlyphItem.Tag>
                     </mah:HamburgerMenuGlyphItem>
                 </mah:HamburgerMenuItemCollection>
             </mah:HamburgerMenu.ItemsSource>
+            <mah:HamburgerMenu.ContentTemplate>
+                <DataTemplate>
+                    <Grid x:Name="ContentGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="48"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0">
+                            <TextBlock x:Name="Header"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="24"
+                                       Text="{Binding Label}"
+                                       />
+                        </Border>
+                        <mah:TransitioningContentControl x:Name="TheContent"
+                                                         Grid.Row="1"
+                                                         Focusable="False"
+                                                         Content="{Binding Tag}"
+                                                         />
+                    </Grid>
+                </DataTemplate>
+            </mah:HamburgerMenu.ContentTemplate>
+            
         </mah:HamburgerMenu>
     </Grid>
 </Page>

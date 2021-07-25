@@ -28,6 +28,9 @@ namespace MSAppStoreClone.Pages
         public delegate void OnTopAppButtonClicked(object sender, RoutedEventArgs e);
         public event OnTopAppButtonClicked TopAppButtonClicked;
 
+        public delegate void OnDownloadsAndUpdtesClicked();
+        public event OnDownloadsAndUpdtesClicked DownloadsAndUpdatesClicked;
+
         public Main()
         {
             InitializeComponent();
@@ -55,7 +58,7 @@ namespace MSAppStoreClone.Pages
 
         private void RightHeaderButtons_HeaderRightButtonsDownloadButtonClick(object sender, RoutedEventArgs e)
         {
-
+            DownloadsAndUpdatesClicked();
         }
 
         private void AnAppClicked(AnAppUC sender, RoutedEventArgs e)
@@ -83,5 +86,6 @@ namespace MSAppStoreClone.Pages
         {
             RightHeaderButtons.MouseDown_OutsideOfHeaderRightButtons();
         }
+
     }
 }
