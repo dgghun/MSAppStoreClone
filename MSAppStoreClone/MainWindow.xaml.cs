@@ -40,6 +40,7 @@ namespace MSAppStoreClone
             MyTopAppsWrappedPage.AnAppClicked += MainWindowContentPage_AppClicked;
             MyTopAppsWrappedPage.BackButtonClicked += MyAppDetails_BackButtonClicked;
             DownloadsAndUpdatesPage = new DownloadsAndUpdates();
+            DownloadsAndUpdatesPage.BackButtonClicked += MyAppDetails_BackButtonClicked;
         }
 
         private void MainWindowContentPage_TopAppButtonClicked(object sender, RoutedEventArgs e)

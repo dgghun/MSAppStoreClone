@@ -13,66 +13,71 @@
     <Grid>
         <Grid.Resources>
             <ResourceDictionary>
+                <!--  This is the template for all menu items. In this sample we use the glyph items.  -->
                 <DataTemplate x:Key="HamburgerMenuItem" DataType="{x:Type mah:HamburgerMenuGlyphItem}">
                     <Grid Height="48">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:HamburgerMenu}}, Path=CompactPaneLength}"/>
+                            <ColumnDefinition Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:HamburgerMenu}}, Path=CompactPaneLength}" />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Image Margin="12"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Source="{Binding Glyph}"/>
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Source="{Binding Glyph}" />
                         <TextBlock Grid.Column="1"
-                                   VerticalAlignment="Center"
-                                   FontSize="16"
-                                   Text="{Binding Label}"/>
-
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Text="{Binding Label}" />
                     </Grid>
                 </DataTemplate>
+
+                <!--  This is the template for all option menu items.  -->
                 <DataTemplate x:Key="HamburgerOptionsMenuItem" DataType="{x:Type mah:HamburgerMenuItem}">
                     <Grid Height="48">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:HamburgerMenu}}, Path=CompactPaneLength}"/>
+                            <ColumnDefinition Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:HamburgerMenu}}, Path=CompactPaneLength}" />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <ContentControl Grid.Column="0"
-                                        Content="{Binding Tag}"
-                                        Focusable="False"
-                                        IsTabStop="False"/>
+                                    Content="{Binding Tag}"
+                                    Focusable="False"
+                                    IsTabStop="False" />
                         <TextBlock Grid.Column="1"
-                                   VerticalAlignment="Center"
-                                   FontSize="16"
-                                   Text="{Binding Label}"/>
-
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Text="{Binding Label}" />
                     </Grid>
                 </DataTemplate>
+
                 <ObjectDataProvider x:Key="DisplayModeEnumValues"
-                                    MethodName="GetValues"
-                                    ObjectType="{x:Type mah:SplitViewDisplayMode}">
+                                MethodName="GetValues"
+                                ObjectType="{x:Type mah:SplitViewDisplayMode}">
                     <ObjectDataProvider.MethodParameters>
-                        <x:Type TypeName="mah:SplitViewDisplayMode"/>
+                        <x:Type TypeName="mah:SplitViewDisplayMode" />
                     </ObjectDataProvider.MethodParameters>
                 </ObjectDataProvider>
+
                 <ObjectDataProvider x:Key="VisibilityEnumValues"
-                                    MethodName="GetValues"
-                                    ObjectType="{x:Type Visibility}">
+                                MethodName="GetValues"
+                                ObjectType="{x:Type Visibility}">
                     <ObjectDataProvider.MethodParameters>
-                        <x:Type TypeName="Visibility"/>
+                        <x:Type TypeName="Visibility" />
                     </ObjectDataProvider.MethodParameters>
                 </ObjectDataProvider>
             </ResourceDictionary>
         </Grid.Resources>
         <Grid.RowDefinitions>
-            <RowDefinition Height="35"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button x:Name="BackButton"
+        <Button Name="BackButton"
                 Grid.Row="0"
                 Width="35"
                 Height="35"
                 Content="&lt;"
                 Click="BackButton_Click"
                 HorizontalAlignment="Left"
-                />
+        />
         <mah:HamburgerMenu x:Name="HamburgerMenuControl"
                            Grid.Row="1"
                            HamburgerVisibility="Collapsed"

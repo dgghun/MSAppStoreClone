@@ -16,11 +16,15 @@ using MahApps.Metro.Controls;
 
 namespace MSAppStoreClone.Pages
 {
+
     /// <summary>
     /// Interaction logic for DownloadsAndUpdates.xaml
     /// </summary>
     public partial class DownloadsAndUpdates : Page
     {
+        public delegate void OnBackButtonClicked(object sender, RoutedEventArgs e);
+        public event OnBackButtonClicked BackButtonClicked;
+
         public DownloadsAndUpdates()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace MSAppStoreClone.Pages
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            BackButtonClicked(sender, e);
         }
 
         private void HamburgerMenuControl_ItemInvoked(object sender, HamburgerMenuItemInvokedEventArgs args)
